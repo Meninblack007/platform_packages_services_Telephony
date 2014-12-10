@@ -17,9 +17,7 @@
 
 package com.android.phone;
 
-import android.app.ActionBar;
 import android.app.Activity;
-import android.app.ActivityOptions;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
@@ -39,6 +37,8 @@ import android.os.AsyncResult;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.os.PowerManager;
+import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
@@ -48,10 +48,9 @@ import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
 import android.provider.ContactsContract.CommonDataKinds;
 import android.provider.Settings;
-import android.telecom.PhoneAccountHandle;
 import android.telecom.TelecomManager;
-import android.telephony.TelephonyManager;
 import android.telephony.PhoneNumberUtils;
+import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.MenuItem;
@@ -64,6 +63,7 @@ import com.android.internal.telephony.CommandsInterface;
 import com.android.internal.telephony.Phone;
 import com.android.internal.telephony.PhoneConstants;
 import com.android.phone.common.util.SettingsUtil;
+import com.android.phone.msim.SelectSubscription;
 import com.android.phone.settings.AccountSelectionPreference;
 import com.android.services.telephony.sip.SipUtil;
 import com.android.internal.telephony.util.BlacklistUtils;
