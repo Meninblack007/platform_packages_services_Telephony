@@ -53,4 +53,8 @@
     <string name="cyngn_reverse_lookup_provider_name">Cyngn Chinese (CN)</string>
     <string name="cyngn_reverse_lookup_provider_value" translatable="false">CyngnChinese</string>
 
+    <!-- msim call settings -->
+    <string name="sim_card_title">SIM card %d</string>
+    <string name="sim_card_summary_empty">SIM slot is empty</string>
+
 </resources>
