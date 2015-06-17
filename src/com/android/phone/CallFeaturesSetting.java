@@ -1814,20 +1814,6 @@ public class CallFeaturesSetting extends PreferenceActivity
         updateVoiceNumberField();
         mVMProviderSettingsForced = false;
 
-<<<<<<< HEAD
-        // Blacklist screen - Needed for setting summary
-        mButtonBlacklist = (PreferenceScreen) prefSet.findPreference(BUTTON_BLACKLIST);
-
-        PreferenceScreen selectSub = (PreferenceScreen) findPreference(BUTTON_SELECT_SUB_KEY);
-        if (selectSub != null) {
-            Intent intent = selectSub.getIntent();
-            intent.putExtra(SelectSubscription.PACKAGE, "com.android.phone");
-            intent.putExtra(SelectSubscription.TARGET_CLASS,
-                    "com.android.phone.msim.MSimCallFeaturesSubSetting");
-        }
-
-=======
->>>>>>> 61ab11f... Improve MSIM call settings.
         if (isMsim && TelephonyManager.getDefault().getMultiSimConfiguration() !=
                 TelephonyManager.MultiSimVariants.DSDS) {
             PreferenceScreen mXDivertPref = (PreferenceScreen) findPreference(BUTTON_XDIVERT_KEY);

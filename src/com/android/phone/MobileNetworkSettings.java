@@ -686,10 +686,12 @@ public class MobileNetworkSettings extends PreferenceActivity
                      networkMode = Integer.valueOf(
                              mButtonEnabledNetworks.getValue()).intValue();
                     setPreferredNetworkSetting(networkMode);
+            
             } else {
                 mPhone.getPreferredNetworkType(obtainMessage(MESSAGE_GET_PREFERRED_NETWORK_TYPE));
             }
         }
+    }
 
         private void resetNetworkModeToDefault() {
             //set the mButtonPreferredNetworkMode
